@@ -1,0 +1,10 @@
+target "Droi_Sample_UserProfile_iOS" do
+	pod 'DroiCoreSDK'
+	pod 'DatePickerDialog-ObjC', '~> 1.2'
+
+	post_install do |installer|
+		require './Pods/DroiCoreSDK/scripts/postInstall.rb'
+		DroiCoreParser.installParser()
+	end
+end
+

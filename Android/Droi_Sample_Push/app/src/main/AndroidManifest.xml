@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.droi.sample.push">
+
+    <!-- 推送SDK使用权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".MainApp">
+
+        <meta-data android:name="com.droi.sdk.application_id" android:value="[DroiBaaS APP ID]" />
+
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--注册推送服务-->
+        <service
+            android:name="com.droi.sdk.push.DroiPushService"
+            android:exported="true"
+            android:process=":pushservice_v2">
+            <intent-filter>
+                <action android:name="com.droi.sdk.push.action.START_v2" />
+            </intent-filter>
+        </service>
+
+        <!--注册推送广播接收器组件-->
+        <receiver
+            android:name="com.droi.sdk.push.TickAlarmReceiver"
+            android:process=":pushservice_v2">
+        </receiver>
+
+        <receiver android:name="com.droi.sdk.push.DroiPushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.USER_CLEARNOTIFY" />
+                <action android:name="com.droi.sdk.push.action.DATA_v2" />
+                <!-- 请使用当前应用包名作为前缀 -->
+                <action android:name="com.droi.sample.push.Action.START_v2" />
+                <action android:name="com.droi.sdk.push.action.REMOVE_NOTIFICATION_v2" />
+            </intent-filter>
+        </receiver>
+
+        <!--注册推送弹出框Activity组件-->
+        <activity
+            android:name="com.droi.sdk.push.DroiPushActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/droi_dialog_activity_style" />
+
+        <!--辅助推送Provider-->
+        <provider
+            android:name="com.droi.sdk.push.PushProvider"
+            android:authorities="com.droi.sdk.push.PushProvider_[DroiBaaS APP ID]"
+            android:exported="true">
+        </provider>
+    </application>
+
+</manifest>

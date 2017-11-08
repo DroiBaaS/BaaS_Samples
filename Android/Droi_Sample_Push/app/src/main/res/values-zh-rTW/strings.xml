@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Push</string>
+    <string name="main">主要</string>
+    <string name="setup">設定</string>
+    <string name="device_id">裝置 ID:</string>
+    <string name="tag_title">標籤:</string>
+    <string name="main_push_description">本專案展示 Droi Push 功能。請參照 Droi 開發者網頁平台的應用推送發送訊息。</string>
+    <string name="current_device">本裝置資訊</string>
+    <string name="empty_tags">無標籤</string>
+    <string name="push_setup_title">Push 設定</string>
+    <string name="enable_push">啟用 Push</string>
+    <string name="set_silent_time">設定靜默模式</string>
+    <string name="time_sep">：</string>
+    <string name="time_to">到</string>
+    <string name="add_tag">加入</string>
+    <string name="remove_tag">移除</string>
+    <string name="tag_name">標籤名</string>
+    <string name="custom_message">自定義訊息：</string>
+</resources>

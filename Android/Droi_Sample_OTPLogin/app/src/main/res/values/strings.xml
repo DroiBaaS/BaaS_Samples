@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DroiUser OTP Login</string>
+    <string name="name">Name</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="login_text">Hi %1$s !\nYou have login~\n\nLogout function is in side menu. </string>
+    <string name="logout">Logout</string>
+    <string name="user_logout">User had logged out.</string>
+    <string name="login_user">Login successfully.</string>
+    <string name="login_fail">Login fail. Error message: [%1$s]</string>
+    <string name="otp_login_text">Demostrating here about DroiBaaS OTP login. Choosing OTP type below to start.</string>
+    <string name="otp_phone">OTP by mobile phone</string>
+    <string name="otp_email">OTP by Email</string>
+    <string name="send_otp">Send OTP code</string>
+    <string name="otp_sent">Otp code sent.</string>
+    <string name="confirm_login_text">Please type OTP code you received here to confirm login.</string>
+    <string name="otp_code">OTP Code:</string>
+    <string name="confirm_login">Confirm Login</string>
+    <string name="login_ok">Login successfully.</string>
+</resources>

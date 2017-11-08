@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Droi_Sample_UserProfile</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="gender">Gender</string>
+    <string name="genderOpt">Male</string>
+    <string name="genderOpt1">Female</string>
+    <string name="birthday">Birthday</string>
+    <string name="address">Address</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="update">Update</string>
+</resources>

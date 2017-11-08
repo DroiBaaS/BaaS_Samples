@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-beta4'
+
+        // 需要使用Annotation Process Tool功能时添加
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.2.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        // DroiCore SDK来源地址
+        maven {
+            url "https://github.com/DroiBaaS/DroiBaaS-SDK-Android/raw/master/"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

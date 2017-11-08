@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DroiUser OAuth Login</string>
+    <string name="name">Name</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="login_text">Hi %1$s !\nYou have login~\n\nLogout function is in side menu. </string>
+    <string name="logout">Logout</string>
+    <string name="user_logout">User had logged out.</string>
+    <string name="login_user">Login successfully.</string>
+    <string name="login_fail">Login fail. Error message: [%1$s]</string>
+    <string name="oauth_login_description">This sample demostrate Droi OAuth login with QQ, Sina, Wechat. Press below icon to login.</string>
+</resources>

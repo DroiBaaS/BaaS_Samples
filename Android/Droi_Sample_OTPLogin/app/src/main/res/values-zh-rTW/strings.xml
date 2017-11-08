@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DroiUser OTP Login</string>
+    <string name="name">名稱</string>
+    <string name="open_drawer">開啟選單</string>
+    <string name="close_drawer">關閉選單</string>
+    <string name="login_text">%1$s 您好！您已成功登入～如要登出的話，請由側邊選單登出。</string>
+    <string name="logout">登出</string>
+    <string name="user_logout">使用者已登出。</string>
+    <string name="login_user">登入成功。</string>
+    <string name="login_fail">登入失敗。錯誤訊息：[%1$s]</string>
+    <string name="otp_login_text">本專案展示 DroiBaaS OTP 如何登入。請選擇 OTP 類型來開始登入。</string>
+    <string name="otp_phone">發送 OTP 到手機</string>
+    <string name="otp_email">發送 OTP 到 Email</string>
+    <string name="send_otp">發送 OTP</string>
+    <string name="otp_sent">OTP 已發送。</string>
+    <string name="confirm_login_text">請輸入您收到的 OTP。</string>
+    <string name="otp_code">OTP:</string>
+    <string name="confirm_login">確認登入</string>
+    <string name="login_ok">已登入。</string>
+</resources>
