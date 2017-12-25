@@ -24,3 +24,6 @@
 # iOS
 ## [Droi_Sample_UserProfile_iOS](./iOS/Droi_Sample_UserProfile_iOS/README.md)
 `Droi_Sample_UserProfile_iOS`是個功能簡單的專案。主要示範如何使用自定義的`DroiUser`來完成延伸資料的載入及儲存。
+
+# CloudCode/js
+這是一個雲代碼的範例程式。主要示範利用 javascript 實作商城購物車功能。
